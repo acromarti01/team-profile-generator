@@ -1,0 +1,32 @@
+{
+  "name": "team-profile-generator",
+  "version": "1.0.0",
+  "description": "Homework 10 project",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "test": "jest",
+    "dev": "nodemon index.js",
+    "start": "node index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/acromarti01/team-profile-generator.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/acromarti01/team-profile-generator/issues"
+  },
+  "homepage": "https://github.com/acromarti01/team-profile-generator#readme",
+  "dependencies": {
+    "inquirer": "^8.1.2"
+  },
+  "devDependencies": {
+    "jest": "^27.0.6",
+    "nodemon": "^2.0.12"
+  }
+}
