@@ -9,11 +9,11 @@ function createHTML(answers) {
         }
         else { html = html + createInternCard(answers[i]); }
     }
-    html = html + secondHalf_HTMLDocument();
+    html = html + secondHalf_HTMLDocument(); 
     return html; 
 }
 
-module.exports = { generateProfile: (answers) => createHTML(answers) }
+module.exports = { generateProfile: (answers) => createHTML(answers) } 
 
 
 function firstHalf_HTMLDocument() {
