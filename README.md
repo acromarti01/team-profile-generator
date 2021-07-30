@@ -1,17 +1,10 @@
-# team-profile-generator
-Homework 10 project
-
-
 # Team Profile Generator
 
 ![badges](https://img.shields.io/badge/license-MIT_License-brightgreen)
 
 ## Description
-Your task is to build a Node.js command-line application that takes in information about employees on a software engineering team, then generates an HTML webpage that displays summaries for each person. 
 
-The project takes in information about employees on a 
-
-The project allows the user to dynamically generate a README
+The project allows the user to input information of employees on a software engineering team then dynamically generate a HTML webpage that displays summaries for each person.
 
 ## Table of Contents
 
@@ -21,7 +14,6 @@ The project allows the user to dynamically generate a README
 - [Contributing](#contributing)
 - [Tests](#tests)
 - [Questions](#questions)
-
 
 ## Installation
 
@@ -33,7 +25,7 @@ To run the application use node index.js
 
 ## License
 
-Licensed under the <a href="">MIT License</a>
+Licensed under the <a href="./LICENSE.txt">MIT License</a>
 
 ## Contributing
 
