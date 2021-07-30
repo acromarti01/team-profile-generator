@@ -2,11 +2,11 @@ const file_system = require('fs');
 const inquirer = require('inquirer');
 const { promisify } = require('util');
 const writeFileAsync = promisify(file_system.writeFile);
-const { generateProfile } = require('./src/template');
+const { generateProfile } = require('./template');
 const { manager_questions, menu_questions, engineer_questions, intern_questions } = require('./questions');
-const Manager = require("./lib/Manager");
-const Engineer = require("./lib/Engineer");
-const Intern = require("./lib/Intern");
+const Manager = require("../lib/Manager");
+const Engineer = require("../lib/Engineer");
+const Intern = require("../lib/Intern");
 const employeeArray = [];
 
 module.exports = {

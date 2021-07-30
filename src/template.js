@@ -76,10 +76,10 @@ function createManagerCard(manager_class) {
                         <p>ID: <span>${manager_class.id}</span></p>
                     </li>
                     <li class="collection-item">
-                        <p>Email: <span>${manager_class.email}</span></p>
+                        <p>Email: </p> <a href="${manager_class.email}">${manager_class.email}</a>
                     </li>
                     <li class="collection-item">
-                        <p>Office number: <span>${manager_class.officeNumber}</span></p>
+                        <p>Office number: ${manager_class.officeNumber}</p>
                     </li>
                 </ul>
             </div>
@@ -109,10 +109,10 @@ function createEngineerCard(engineer_class) {
                         <p>ID: <span>${engineer_class.id}</span></p>
                     </li>
                     <li class="collection-item">
-                        <p>Email: <span>${engineer_class.email}</span></p>
+                        <p>Email: </p> <a href="${engineer_class.email}">${engineer_class.email}</a>
                     </li>
                     <li class="collection-item">
-                        <p>Github: <span>${engineer_class.getGithub()}</span></p>
+                        <p>Github: </p> <a href="${engineer_class.getGithub()}">${engineer_class.getGithub()}</a>
                     </li>
                 </ul>
             </div>
