@@ -7,7 +7,7 @@ const { manager_questions, menu_questions, engineer_questions, intern_questions 
 const Manager = require("../lib/Manager");
 const Engineer = require("../lib/Engineer");
 const Intern = require("../lib/Intern");
-const employeeArray = [];
+const employeeArray = [];  //Array of Manager, Intern and Engineer objects
 
 module.exports = {
     promptManagerQuestions() {
@@ -22,7 +22,6 @@ module.exports = {
                 employeeArray.push(manager);
             })
     }
-       
 }
 
 function promptMenuOptions() {

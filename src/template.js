@@ -1,19 +1,19 @@
-function createHTML(answers) {
+function createHTML(employeeArray) {
     let html = firstHalf_HTMLDocument();
-    for (let i = 0; i < answers.length; i++) {
-        if (answers[i].role === "Manager") {
-            html = html + createManagerCard(answers[i]);
+    for (let i = 0; i < employeeArray.length; i++) {
+        if (employeeArray[i].role === "Manager") {
+            html = html + createManagerCard(employeeArray[i]);
         }
-        else if (answers[i].role === "Engineer") {
-            html = html + createEngineerCard(answers[i]);
+        else if (employeeArray[i].role === "Engineer") {
+            html = html + createEngineerCard(employeeArray[i]);
         }
-        else { html = html + createInternCard(answers[i]); }
+        else { html = html + createInternCard(employeeArray[i]); }
     }
     html = html + secondHalf_HTMLDocument(); 
     return html; 
 }
 
-module.exports = { generateProfile: (answers) => createHTML(answers) } 
+module.exports = { generateProfile: (employeeArray) => createHTML(employeeArray) } 
 
 
 function firstHalf_HTMLDocument() {
@@ -34,7 +34,9 @@ function firstHalf_HTMLDocument() {
     <title>My Team</title>
 </head>
 <body>
-    <header></header>
+    <header>
+        <h3>My Team</h3>
+    </header>
     <main class="container">
 `
     return html;
@@ -42,7 +44,8 @@ function firstHalf_HTMLDocument() {
 
 function secondHalf_HTMLDocument() {
     const html =
-        `</main>
+        `
+</main>
 
 <footer></footer>
 
@@ -55,28 +58,25 @@ function secondHalf_HTMLDocument() {
     return html;
 }
 
-
-
 function createManagerCard(manager_class) {
     const html =
         `
-<div class="row">
-    <div class="col s12 m6">
+
         <div class="card grey lighten-3">
             <div class="card-title blue darken-2 white-text">
-                <label class="manager-name">${manager_class.name}</label>
+                <label class="employee-name">${manager_class.getName()}</label>
                 <div class="flex-this">                        
                     <i class="small material-icons">free_breakfast</i>
-                    <label class="role">${manager_class.role}</label> 
+                    <label class="role">${manager_class.getRole()}</label> 
                 </div>                                               
             </div>
             <div class="padding-div">
                 <ul class="collection">
                     <li class="collection-item">
-                        <p>ID: <span>${manager_class.id}</span></p>
+                        <p>ID: <span>${manager_class.getId()}</span></p>
                     </li>
                     <li class="collection-item">
-                        <p>Email: </p> <a href="${manager_class.email}">${manager_class.email}</a>
+                        <p>Email: <a href="mailto:${manager_class.getEmail()}?subject=Subject&body=message%20goes%20here">${manager_class.getEmail()}</a></p>                        
                     </li>
                     <li class="collection-item">
                         <p>Office number: ${manager_class.officeNumber}</p>
@@ -84,8 +84,6 @@ function createManagerCard(manager_class) {
                 </ul>
             </div>
         </div>
-    </div>
-</div>
 `
     return html;
 }
@@ -93,32 +91,28 @@ function createManagerCard(manager_class) {
 function createEngineerCard(engineer_class) {
     const html =
         `
-<div class="row">
-    <div class="col s12 m6">
         <div class="card grey lighten-3">
             <div class="card-title blue darken-2 white-text">
-                <label class="manager-name">${engineer_class.name}</label>
+                <label class="employee-name">${engineer_class.getName()}</label>
                 <div class="flex-this">                        
-                    <i class="small material-icons">free_breakfast</i>
-                    <label class="role">${engineer_class.role}</label> 
+                    <i class="small material-icons">business_center</i>
+                    <label class="role">${engineer_class.getRole()}</label> 
                 </div>                                               
             </div>
             <div class="padding-div">
                 <ul class="collection">
                     <li class="collection-item">
-                        <p>ID: <span>${engineer_class.id}</span></p>
+                        <p>ID: <span>${engineer_class.getId()}</span></p>
                     </li>
                     <li class="collection-item">
-                        <p>Email: </p> <a href="${engineer_class.email}">${engineer_class.email}</a>
+                        <p>Email: <a href="mailto:${engineer_class.getEmail()}?subject=Subject&body=message%20goes%20here">${engineer_class.getEmail()}</a></p>
                     </li>
                     <li class="collection-item">
-                        <p>Github: </p> <a href="${engineer_class.getGithub()}">${engineer_class.getGithub()}</a>
+                        <p>Github: <a href="https://github.com/${engineer_class.getGithub()}">${engineer_class.getGithub()}</a></p>                    
                     </li>
                 </ul>
             </div>
         </div>
-    </div>
-</div>
 `
     return html;
 }
@@ -126,23 +120,21 @@ function createEngineerCard(engineer_class) {
 function createInternCard(intern_class) {
     const html =
         `
-<div class="row">
-    <div class="col s12 m6">
         <div class="card grey lighten-3">
             <div class="card-title blue darken-2 white-text">
-                <label class="manager-name">${intern_class.name}</label>
+                <label class="employee-name">${intern_class.getName()}</label>
                 <div class="flex-this">                        
-                    <i class="small material-icons">free_breakfast</i>
-                    <label class="role">${intern_class.role}</label> 
+                    <i class="small material-icons">school</i>
+                    <label class="role">${intern_class.getRole()}</label> 
                 </div>                                               
             </div>
             <div class="padding-div">
                 <ul class="collection">
                     <li class="collection-item">
-                        <p>ID: <span>${intern_class.id}</span></p>
+                        <p>ID: <span>${intern_class.getId()}</span></p>
                     </li>
                     <li class="collection-item">
-                        <p>Email: <span>${intern_class.email}</span></p>
+                        <p>Email: <a href="mailto:${intern_class.getEmail()}?subject=Subject&body=message%20goes%20here">${intern_class.getEmail()}</a></p>
                     </li>
                     <li class="collection-item">
                         <p>School: <span>${intern_class.getSchool()}</span></p>
@@ -150,8 +142,6 @@ function createInternCard(intern_class) {
                 </ul>
             </div>
         </div>
-    </div>
-</div>
 `
     return html;
 }
