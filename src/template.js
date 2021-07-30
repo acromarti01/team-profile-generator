@@ -10,7 +10,7 @@ function createHTML(answers) {
         else { html = html + createInternCard(answers[i]); }
     }
     html = html + secondHalf_HTMLDocument();
-    return html;
+    return html; 
 }
 
 module.exports = { generateProfile: (answers) => createHTML(answers) }
