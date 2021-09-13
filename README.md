@@ -4,7 +4,7 @@
 
 ## Description
 
-The project allows the user to input information of employees on a software engineering team then dynamically generate a HTML webpage that displays summaries for each person. 
+The project allows the user to input information of employees on a software engineering team then dynamically generate a HTML webpage that displays summaries for each person.
 
 ## ScreenShot
 
