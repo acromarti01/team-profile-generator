@@ -17,7 +17,7 @@ The project allows the user to input information of employees on a software engi
 
 ## Installation
 
-To install dependecies in the terminal use npm install
+To install dependecies in the terminal use npm install 
 
 ## Usage
 
