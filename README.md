@@ -6,6 +6,16 @@
 
 The project allows the user to input information of employees on a software engineering team then dynamically generate a HTML webpage that displays summaries for each person.
 
+## List Of Technologies
+
+<ul>
+    <li>HTML5</li>
+    <li>CSS</li>
+    <li>JavaScript</li>
+    <li>Inquirer</li>
+    <li>Node</li>
+</ul>
+
 ## ScreenShot
 
 ![Image](./assets/images/screenshot.png)
